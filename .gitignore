@@ -51,4 +51,3 @@ target/
 # Unit test / coverage reports
 #  Usually these files are written by a python script from a template
 var/
-version.txt
