@@ -249,6 +249,8 @@ class VideoAIUser(object):
         url = '{}/auth/api_login?client_id={}'.format(authentication_server, client_id)
         header = sign_request(url=url, client_id=client_id, client_secret=client_secret, data=data, method='POST', request=request)
         response = requests.post(url, data, headers=header, verify=VERIFY_SSL)
+        print('login res', response)
+        print('login res text', response.text)
         json_response = json.loads(response.text)
 
         if 'status' in json_response and json_response['status'] == 'fail':
